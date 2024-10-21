@@ -12,7 +12,7 @@ export default function Home() {
         <h2 className="text-left text-l text-center md:text-5xl mt-4 mb-4">Hi, I'm Haripriya</h2>
         </div>
         <div className="flex flex-col  items-center justify-center ">
-          <p className="text-lg sm:text-md text-center sm:text-left mt-4 mb-4 "> "I am an Electrical Engineer Turned Front-End Developer. I have two years of experience in Tata Consultancy Services.
+          <p className="text-lg sm:text-md text-center sm:text-left mt-4 mb-4 "> "I am an Electrical Engineer Turned Software Developer. I have two years of experience in Tata Consultancy Services.
             I enjoy programming and solving modern day challenges with it."</p>
         </div>
       </div>
