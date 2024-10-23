@@ -21,7 +21,7 @@ export default function Home() {
         <div className="sm:my-4 sm:rounded-tl text-xl ">
           <ul className=" flex sm:flex-row flex-col justify-center items-center sm:justify-evenly">
             <li className='sm:mx-4 flex flex-col w-1/4'>
-              <a className="flex link flex-col justify-center items-center no-underline" href="https://clickandrent.netlify.app">
+              <a className="flex link flex-col justify-center items-center no-underline" href="https://clickenrent.netlify.app">
               <img className="mb-3 w-[75%] h-40  object-cover hover:w-[100%]  shadow-lg" src={clickPic} alt="Hari image" />
               Click&Rent</a></li>
             <li className='sm:mx-4  flex flex-col w-1/4'>
