@@ -7,7 +7,7 @@ import rpsPic from '../assets/rps.jpg'
 export default function Home() {
   return (
     <div className="fixed w-full h-full bg-black font-mono text-white flex flex-col  px-12 py-12 overflow-y-scroll lg:overflow-hidden ">
-      <div className=" sm:my-4 md:h-[50%] sm:mx-4 sm:py-4 w-full sm:px-20 flex flex-col ">
+      <div className=" sm:my-4 md:h-[30%] sm:mx-4 sm:py-4 w-full sm:px-20 flex flex-col ">
         <div className=''>
           <h2 className="text-left text-2xl text-center md:text-5xl mt-4 mb-4">Hi, I'm Haripriya</h2>
         </div>
@@ -17,7 +17,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="sm:my-4 sm:mx-4 md:h-[50%] sm:rounded-tl px-20">
+      <div className="sm:my-4 sm:mx-4 md:h-[70%] sm:rounded-tl px-20">
+      <div className='py-4'>
+          <h2 className="text-left text-2xl text-center md:text-5xl mt-4 mb-4">My Projects</h2>
+        </div>
         <div className="sm:my-4 sm:rounded-tl text-xl ">
           <ul className=" flex lg:flex-row flex-col justify-center items-center lg:justify-evenly">
             <li className='sm:mx-4 flex flex-col lg:w-1/4'>
