@@ -5,7 +5,7 @@ import Download from "./Download";
 function Navbar() {
     const [toggleHamburg, setToggleHamburg] = useState(false)
     return (
-        <div className="navbar w-full h-[10%] bg-black  md:px-10 text-md text-gray-200">
+        <div className="navbar w-full h-[10%] bg-black font-mono  md:px-10 text-md text-gray-200">
             <div className="navbar-center">
                 <div className="dropdown md:hidden" >
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={() => { setToggleHamburg(!toggleHamburg) }}>

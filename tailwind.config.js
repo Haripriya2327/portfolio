@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
       'home-bg-desktop': "url('./src/assets/home-bg-desktop.png')",
       'home-bg-mobile': "url('./src/assets/home-bg-mobile.png')",
+    },
+    fontFamily: {
+      mono: ['"Fira Code"', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
     }
   },
   },

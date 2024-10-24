@@ -3,7 +3,7 @@ import React from 'react';
 const Download = () => {
     return (
         <div>
-            <a href="../HaripriyaCV.pdf" download="HaripriyaCV.pdf">
+            <a href="../MHaripriyaCV.pdf" download="MHaripriyaCV.pdf">
                 <button>Download Resume</button>
             </a>
         </div>
