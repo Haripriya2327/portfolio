@@ -9,7 +9,7 @@ export default function Contact() {
             <p className='my-12 text-2xl'>Thanks for joining!</p>
             <div className="hover:text-gray-200">
                         <Link to="/">
-                            <button className="flex flex-row gap-2"> Back to Home</button>
+                            <button className="flex flex-row gap-2"> Back to Home  </button>
                         </Link>
                     </div>
         </div>;
