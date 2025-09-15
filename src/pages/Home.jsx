@@ -1,49 +1,162 @@
-import hariPic from '../assets/Hari.jpg'
-import clickPic from '../assets/click.jpg'
-import uriyadiPic from '../assets/uriyadi.jpg'
-import weatherPic from '../assets/weather.jpg'
-import rpsPic from '../assets/rps.jpg'
+import PropTypes from "prop-types";
+
+const PROJECTS_DATA = [
+  {
+    id: "click-rent",
+    title: "Click & Rent",
+    description: "A modern rental platform with intuitive user interface",
+    url: "https://clickenrent.netlify.app",
+  },
+  {
+    id: "weather-wise",
+    title: "Weather Wise",
+    description: "Real-time weather tracking application",
+    url: "https://stormwatch.netlify.app/",
+  },
+  {
+    id: "uriyadi",
+    title: "Uriyadi",
+    description: "Interactive gaming experience",
+    url: "https://haripriya2327.github.io/uriyadi-projectOne/",
+  },
+  {
+    id: "rock-paper-scissors",
+    title: "Rock Paper Scissors",
+    description: "Classic game with modern twist",
+    url: "https://haripriyamohanasundaram.github.io/rps-play/",
+  },
+];
+
+const ProjectCard = ({ project }) => (
+  <a
+    href={project.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`View ${project.title} project - ${project.description}`}
+    className="group bg-gray-900 hover:bg-gray-800 rounded-xl border border-gray-700 shadow-md overflow-hidden transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl flex flex-col"
+  >
+    <div className="flex items-center justify-center h-32 bg-gradient-to-br from-yellow-500/20 via-gray-800 to-black">
+      <span className="text-lg sm:text-xl font-bold text-yellow-400 text-center px-3">
+        {project.title}
+      </span>
+    </div>
+    <div className="p-5 flex flex-col flex-1">
+      <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-yellow-400 mb-2">
+        {project.title}
+      </h3>
+      <p className="text-gray-400 text-sm sm:text-base flex-1">
+        {project.description}
+      </p>
+    </div>
+  </a>
+);
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default function Home() {
   return (
-    <div className="fixed w-full h-full bg-black font-mono text-white flex flex-col  px-12 py-12 overflow-y-scroll lg:overflow-hidden ">
-      <div className=" sm:my-4 md:h-[30%] sm:mx-4 sm:py-4 w-full sm:px-20 flex flex-col ">
-        <div className=''>
-          <h2 className="text-left text-2xl text-center md:text-5xl mt-4 mb-4">Hi, I'm Haripriya</h2>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white font-sans">
+      {/* Hero */}
+      <header className="text-center py-20 px-6">
+        <h1 className="text-4xl sm:text-6xl font-extrabold mb-6">
+          Hi, I'm <span className="text-yellow-400">Haripriya</span>
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          Electrical Engineer turned Software Developer with{" "}
+          <strong>2 years of experience at TCS</strong>. Passionate about building elegant,
+          efficient web applications that solve real-world problems.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a
+            href="#projects"
+            className="px-5 py-2 bg-yellow-400 text-black font-medium rounded-lg shadow-md hover:bg-yellow-300 transition"
+          >
+            View Projects
+          </a>
+          <a
+            href="#contact"
+            className="px-5 py-2 border border-yellow-400 text-yellow-400 font-medium rounded-lg hover:bg-yellow-400 hover:text-black transition"
+          >
+            Contact Me
+          </a>
         </div>
-        <div className="flex flex-col  items-center justify-center ">
-          <p className="text-lg sm:text-md text-center sm:text-left mt-4 mb-4 "> "I am an Electrical Engineer Turned Software Developer. I have two years of experience in Tata Consultancy Services.
-            I enjoy programming and solving modern day challenges with it."</p>
-        </div>
-      </div>
+      </header>
 
-      <div className="sm:my-4 sm:mx-4 md:h-[70%] sm:rounded-tl px-20">
-      <div className='py-4'>
-          <h2 className="text-left text-2xl text-center md:text-5xl mt-4 mb-4">My Projects</h2>
+      {/* About */}
+      <section
+        id="about"
+        className="max-w-4xl mx-auto text-center px-6 py-16"
+      >
+        <h2 className="text-3xl font-bold mb-6">
+          About <span className="text-yellow-400">Me</span>
+        </h2>
+        <p className="text-gray-300 text-lg leading-relaxed">
+          With a background in <strong>Electrical Engineering</strong> and{" "}
+          <strong>Software Development</strong>, I bring analytical thinking and
+          creativity together. I thrive in crafting responsive, user-friendly
+          applications with clean, maintainable code. My goal is to continue
+          growing as a developer while contributing to impactful projects.
+        </p>
+      </section>
+
+      {/* Projects */}
+      <main id="projects" className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          My <span className="text-yellow-400">Projects</span>
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {PROJECTS_DATA.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
-        <div className="sm:my-4 sm:rounded-tl text-xl ">
-          <ul className=" flex lg:flex-row flex-col justify-center items-center lg:justify-evenly">
-            <li className='sm:mx-4 flex flex-col lg:w-1/4'>
-              <a className="flex link flex-col justify-center items-center no-underline" href="https://clickenrent.netlify.app">
-                <img className="mb-3 w-[75%] h-40  object-cover hover:w-[100%]  shadow-lg" src={clickPic} alt="Hari image" />
-                Click&Rent</a></li>
-            <li className='sm:mx-4  flex flex-col lg:w-1/4'>
-              <a className="link flex flex-col justify-center items-center no-underline" href="https://stormwatch.netlify.app/">
-                <img className="mb-3 w-[75%] h-40  object-cover   hover:w-[100%]  shadow-lg" src={weatherPic} alt="Hari image" />
-                Weather Wise</a></li>
-            <li className='sm:mx-4  flex flex-col lg:w-1/4'>
-              <a className="link flex flex-col justify-center items-center no-underline " href="https://haripriya2327.github.io/uriyadi-projectOne/">
-                <img className="mb-3 w-[75%] h-40 hover:w-[100%] object-cover shadow-lg" src={uriyadiPic} alt="Hari image" />
-                Uriyadi</a></li>
-            <li className='sm:mx-4  flex flex-col lg:w-1/4'>
-              <a className="link flex flex-col justify-center items-center no-underline" href="https://haripriyamohanasundaram.github.io/rps-play/">
-                <img className="mb-3 w-[75%] h-40 hover:w-[100%] object-cover shadow-lg" src={rpsPic} alt="Hari image" />
-                RPS</a></li>
-            {/* <li className='sm:mx-4  flex flex-col'>
-              <img className="mb-3 w-24 h-24 sm:w-24 sm:h-24 rounded-full  shadow-lg" src={hariPic} alt="Hari image" />
-              <a className="link flex justify-center items-center" href="https://haripriyamohanasundaram.github.io/rps-play/">Rock Paper Scissors</a></li> */}
-          </ul>
+      </main>
+
+      {/* Contact */}
+      <footer
+        id="contact"
+        className="bg-gray-900 border-t border-gray-800 py-12 px-6 text-center"
+      >
+        <h2 className="text-2xl font-bold mb-6">
+          Get in <span className="text-yellow-400">Touch</span>
+        </h2>
+        <p className="text-gray-400 mb-6">
+          I'm open to collaborations, opportunities, and conversations!
+        </p>
+        <div className="flex justify-center gap-6">
+          <a
+            href="mailto:work.haripriya@gmail.com"
+            className="text-yellow-400 hover:text-yellow-300 transition"
+          >
+            📧 Email
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-yellow-300 transition"
+          >
+            💼 LinkedIn
+          </a>
+          <a
+            href="https://github.com/Haripriya2327"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-yellow-300 transition"
+          >
+            🖥️ GitHub
+          </a>
         </div>
-      </div>
-    </div>);
+        <p className="text-gray-500 text-sm mt-8">
+          © {new Date().getFullYear()} Haripriya. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  );
 }
